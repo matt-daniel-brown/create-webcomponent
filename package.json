@@ -1,0 +1,35 @@
+{
+	"name": "create-webcomponent",
+	"version": "0.2.3",
+	"description": "NPM Package To Quickly Scaffold A New Web Component / Custom Element Boilerplate.",
+	"license": "MIT",
+	"repository": "matt-daniel-brown/create-webcomponent",
+	"author": {
+		"name": "Matt Brown",
+		"email": "hi@mattbrown.email",
+		"url": "dev.mattdanielbrown.com"
+	},
+	"bin": "cli.js",
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js",
+		"cli.js"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		""
+	],
+	"dependencies": {
+		"meow": "^5.0.0"
+	},
+	"devDependencies": {
+		"ava": "^2.1.0",
+		"xo": "^0.24.0"
+	}
+}
