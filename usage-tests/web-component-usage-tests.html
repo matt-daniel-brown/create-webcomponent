@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Component Usage Tests</title>
+    <link rel="import" href="javascript-and-html/web-component.html">
+</head>
+<body>
+
+    <header role="banner">
+        <hgroup>
+            <h1>Web Component Usage Tests</h1>
+        </hgroup>
+    </header>
+
+    <main role="main">
+        <section id="javascript-and-html-test">
+            <h3>Javascript and HTML Web Component Test</h3>
+            <hr>
+            <web-component></web-component>
+        </section>
+    </main>
+
+    <script>
+        console.log(
+            "Native HTML Imports?", 'import' in document.createElement('link'),
+            "Native Custom Elements v0?", 'registerElement' in document,
+            "Native Shadow DOM v0?", 'createShadowRoot' in document.createElement('div')
+        );
+    </script>
+</body>
+</html>

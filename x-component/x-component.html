@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<template id="template">
+    <style>
+        .webcomponents {
+            width: 100%;
+            max-width: 160px;
+            height: auto;
+        }
+    </style>
+    <div id="container">
+        <img class="webcomponents" src="http://webcomponents.org/img/logo.svg">
+        <p>hello</p>
+    </div>
+</template>
+<script>
+    // This element will be registered to index.html
+    // Because `document` here means the one in index.html
+    const XComponent = document.registerElement('x-component', {
+        prototype: Object.create(HTMLElement.prototype, {
+            createdCallback: {
+                value: function () {
+                    const root = this.createShadowRoot();
+                    const template = document.querySelector('#template');
+                    const clone = document.importNode(template.content, true);
+                    root.appendChild(clone);
+                }
+            }
+        })
+    });
+</script>
+</body>
+</html>

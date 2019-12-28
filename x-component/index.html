@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="import" href="x-component.html">
+</head>
+<body>
+
+    <main role="main">
+        <section>
+            <h3>Demo:</h3>
+            <hr>
+            <x-component></x-component>
+        </section>
+    </main>
+
+<script>
+    console.log(
+        "Native HTML Imports?", 'import' in document.createElement('link'),
+        "Native Custom Elements v0?", 'registerElement' in document,
+        "Native Shadow DOM v0?", 'createShadowRoot' in document.createElement('div')
+    );
+</script>
+</body>
+</html>
